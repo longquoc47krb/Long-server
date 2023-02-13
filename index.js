@@ -19,5 +19,5 @@ app.post("/feedback", async (req, res) => {
     res.status(500).send({ error: error.message });
   }
 });
-
-app.listen(5000, () => console.log("API listening on port 5000"));
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log("API listening on port 5000"));
